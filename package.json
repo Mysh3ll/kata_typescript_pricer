@@ -29,7 +29,7 @@
     "build": "rm -rf ./dist && tsc",
     "start": "ts-node-dev",
     "test": "jest --maxWorkers 50% --verbose --config ./jest.ts.conf.json",
-    "test:watch": "jest --watchAll --maxWorkers 25% --config ./jest.ts.conf.json",
+    "test:watch": "jest --watch --maxWorkers 25% --config ./jest.ts.conf.json",
     "test:watch:coverage": "jest --watchAll --maxWorkers 25% --config ./jest.ts.conf.json --coverage",
     "test:coverage": "jest --coverage --config ./jest.ts.conf.json",
     "test:mutate": "stryker run",

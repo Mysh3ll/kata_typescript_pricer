@@ -1,24 +1,41 @@
-# GoblinsAtCode's kata sandbox (@Maeevick)
+# Mysh3ll's kata sandbox ( thx to [@Maeevick](https://github.com/Maeevick))
 
 A very simple boilerplate to have fun with kata and experiments
 
-### Experimental `fork.sh` script
+From [@Xnopre](https://github.com/xnopre/xnopre-katas) Katas TDD
 
-**helper to fork the boilerplate on your repository** (:warning: _at your own risks, but not so high !_ :heart:)
+# Calcul de prix
 
-```shell
-sh fork.sh
-```
+> Très bon sujet très simple pour débuter en TDD, avec des tests simples (sans mock)
 
-- _do you wish to perform migration ?_
-- _what's the url of the target remote ?_
-    - then script will change the remote url
-    - reset the branch
-    - amend the boilerplate in the first commit
-- _do you want to push now ?_
-    - push it on your main branch on your repository
+Générer une chaine de caractères avec le prix total à partir des informations suivantes :
 
-:arrow_right: **Note**: feel free to improve it and submit PR, it's far from perfect :heart:
+- Nombre d'articles
+- Prix unitaire
+- Taxe
+
+Exemples chiffrées :
+
+- 3 articles à 1,21 € et taxe 0 % → “3.63 €”
+- 3 articles à 1,21 € et taxe 5 % → “3.81 €”
+- 3 articles à 1,21 € et taxe 20 % → “4.36 €”
+
+Puis on ajoute des réductions si le prix total dépense un seuil :
+
+- 1000 € → Remise 3% :
+  - Ex : 5 x 345,00 € + taxe 10% → “1840.58 €”
+- 5000 € → Remise 5% :
+  - Ex : 5 x 1299,00 € + taxe 10% → “6787.28 €”
+
+## Tips si tu débutes en TDD
+
+- Chaque exemple chiffré ci-dessus peut correspondre à un test
+- Mettre en place une implémentation la plus simple possible (une fonction ou une classe et une fonction devrait
+  suffire)
+- Toujours implémenter le strict minium ("en toute intelligence" 😉) pour faire passer chaque test
+
+Mieux vaut essayer et chercher par toi même, mais tu peux trouver des solutions, ou au moins des contextes et
+outillage, [sur ce dépôt xnopre/tdd-demos](https://github.com/xnopre/tdd-demos).
 
 ### Requirements
 
@@ -45,9 +62,9 @@ make install
 ```shell
 npm run start [your file/entry point]
 
-npm run start src/welcome.ts # for example
+npm run start src/pricer.ts # for example
 or
-make start ARGS="src/welcome.ts"
+make start ARGS="src/pricer.ts"
 ```
 
 - **execute all tests files once** 
