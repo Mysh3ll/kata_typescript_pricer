@@ -7,4 +7,13 @@ services:
     working_dir: "/usr/src/app"
     volumes:
       - ./:/usr/src/app:rw,Z
+      - node_modules:/usr/src/app/node_modules:rw,Z
     tty: true
+
+volumes:
+  node_modules:
+    driver: local
+    driver_opts:
+      type: none
+      o: bind
+      device: ./node_modules
